@@ -1,8 +1,6 @@
- /* eslint-disable */ 
-
 import React from 'react'
 
-//ESTE ES UN COMPONENTE DE CLASE
+// ESTE ES UN COMPONENTE DE CLASE
 
 // SE DECLARA UNA CLASE (NUESTRO MODULO) QUE EXTIENDE A React.Component
 
