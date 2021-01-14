@@ -3,26 +3,33 @@ import React from 'react'
 import PropTypes from 'prop-types'
 //ESTE ES UN COMPONENTE PRESENTACIONAL
 //Declara una constante para usarse como modulo con sintaxis JSX 
+
+//El objeto props es un único parametro 
 const Card = ({professor, title, desc, price, image}) => (
     <>
-    <article className="s-shadow-bottom">
-        <div className="s-ratio-16-9 img-container s-radius-tl s-radius-tr">
-            <img src={image} alt="poster" />
-        </div>
-        <div className="s-bg-white s-pxy-2">
-            <h3>{title}</h3>
-            <p className="s-mb-0">{desc}</p>
-        </div>
-        <footer className="s-cross-center s-bg-grey s-pxy-2 s-radius-br s-radius-bl">
-            <div className="s-10 s-mr-1">
-                <div className="circle ">
-                <img  src="https://ed-grid.com/assets/img/alexys.jpg" alt="Profesor" />
+    <article class="card">
+    <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
+      <img src={image} alt="portadaCurso" />
+    </div>
+    <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
+      <h3 class="t5 s-mb-2 s-center">
+        {title}
+      </h3>
+      <div class="s-mb-2 s-main-center">
+        <div class="card__teacher s-cross-center">
+          <div class="card__avatar s-mr-1">
+            <div class="circle img-container">
+              <img src="path/img" alt="profesorCurso" />
             </div>
-            </div>
-            <p className="s-mb-0">{professor}</p>
-            <div className="button s-to-right"> ${price} USD</div>
-        </footer>
-    </article>
+          </div>
+          <span class="small">{professor}</span>
+        </div>
+      </div>
+      <div class="s-main-center">
+        <a class="button--ghost-alert button--tiny" href="#">${price}USD</a>
+      </div>
+    </div>
+  </article>
     </>
 )
 

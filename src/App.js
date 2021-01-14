@@ -1,19 +1,21 @@
 import './Styles/Styles.scss'
 // SE IMPORTAN LOS COMPONENTES A UTILIZAR
-import home from './components/organismos/home'
-import shop from './components/organismos/shop'
-import about from './components/organismos/about'
+import Home from './components/organismos/Home'
+import Shop from './components/organismos/Shop'
+import About from './components/organismos/About'
 import Nav from './components/organismos/Nav'
+import Users from './components/Users'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 const App = () => (
     <>
-    <Nav />
     <Router>
-        <Route path="/" exact component={home} />
+    <Nav />
+        <Route path="/" exact component={Home} />
         <Switch >
-            <Route path="/shop" component={shop} />
-            <Route path="/about" component={about} />
+            <Route path="/shop" component={Shop} />
+            <Route path="/about" component={About} />
+            <Route path="/users" component={Users} />
         </Switch>
     </Router>
     </>
