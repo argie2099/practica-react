@@ -28,7 +28,7 @@ class Shop extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://my-json-server.typicode.com/argie2099/practica-react')
+        axios.get('https://my-json-server.typicode.com/argie2099/practica-react/db')
         .then(res => {
             this.setState({
                 cursos: res
