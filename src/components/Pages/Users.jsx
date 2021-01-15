@@ -1,33 +1,29 @@
 import React, { Component } from 'react'
-import UserCard from './Moleculas/UserCard'
+import UsersGrid from '../Organismos/UsersGrid'
 
 class Users extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            users: []
+            usersArr: []
         }
     }
 
-    render(props) {
-        const { users } = this.state
-        return (
-            <div className="ed-grid m-grid-2">
-                {
-                    users.map( u => (
-                         <UserCard key={u.id} name={u.name} mail={u.email} />
-                    ))
-                }
-            </div>
+    render() {
+        const { usersArr } = this.state
+
+        return(
+            <UsersGrid users={usersArr} />
         )
+
     }
 
     componentDidMount() {
         fetch('https://jsonplaceholder.typicode.com/users', { method: 'get'})
         .then(res => res.json()).then(res2 => {
             this.setState({
-                users: res2
+                usersArr: res2
             })
         })
     } 

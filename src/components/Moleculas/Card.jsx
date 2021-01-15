@@ -7,26 +7,26 @@ import PropTypes from 'prop-types'
 //El objeto props es un único parametro 
 const Card = ({professor, title, desc, price, image}) => (
     <>
-    <article class="card">
-    <div class="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
+    <article className="card">
+    <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
       <img src={image} alt="portadaCurso" />
     </div>
-    <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-      <h3 class="t5 s-mb-2 s-center">
+    <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
+      <h3 className="t5 s-mb-2 s-center">
         {title}
       </h3>
-      <div class="s-mb-2 s-main-center">
-        <div class="card__teacher s-cross-center">
-          <div class="card__avatar s-mr-1">
-            <div class="circle img-container">
+      <div className="s-mb-2 s-main-center">
+        <div className="card__teacher s-cross-center">
+          <div className="card__avatar s-mr-1">
+            <div className="circle img-container">
               <img src="path/img" alt="profesorCurso" />
             </div>
           </div>
-          <span class="small">{professor}</span>
+          <span className="small">{professor}</span>
         </div>
       </div>
-      <div class="s-main-center">
-        <a class="button--ghost-alert button--tiny" href="#">${price}USD</a>
+      <div className="s-main-center">
+        <a className="button--ghost-alert button--tiny" href="/">${price}USD</a>
       </div>
     </div>
   </article>

@@ -3,14 +3,14 @@ import React from 'react';
 const UserCard = ({name, mail}) => {
     return (
         <>
-        <article class="card">
-        <div class="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-          <h3 class="t5 s-mb-2 s-center">
+        <article className="card">
+        <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
+          <h3 className="t5 s-mb-2 s-center">
             {name}
           </h3>
-          <div class="s-mb-2 s-main-center">
-            <div class="card__teacher s-cross-center">
-              <span class="small">{mail}</span>
+          <div className="s-mb-2 s-main-center">
+            <div className="card__teacher s-cross-center">
+              <span className="small">{mail}</span>
             </div>
           </div>
         </div>
