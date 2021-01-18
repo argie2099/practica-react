@@ -7,7 +7,12 @@ const withLoader = (targetName, WrappedComponent) => {
         }
 
         render() {
-            return this.props[targetName].length === 0 ? <h1>Cargando...</h1> : <WrappedComponent {...this.props} />
+            return this.props[targetName].length === 0 ? 
+            <div className="ed-grid m-grid-2">
+                <h1>Cargando...</h1>
+            </div>
+            :
+            <WrappedComponent {...this.props} />
         }
     }
 }
